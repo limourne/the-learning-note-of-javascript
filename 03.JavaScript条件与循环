@@ -1,0 +1,84 @@
+1.if 语句
+语法：
+if(条件){
+    // 条件为 true 时要执行的代码
+}
+//条件为false时要执行的代码
+只有当指定条件为true是，该语句才会执行代码。
+注意，在使用if语句时，不用使用赋值符"="，就算用了，也要把常亮放在等号左边。如 2 = x .
+
+2.else 语句
+语法：
+if (expression) {
+  // 条件为 true 时执行
+}
+else {
+  // 条件为 false 时执行
+}
+
+3.else if 语句
+语法：
+if (条件1) {
+  // 条件1为 true 时执行
+} else if (条件2) {
+  // 条件1为 false ,条件2为 true 时执行
+} else {
+  // 条件1,2均为 false 时执行
+}
+
+4.switch 语句
+语法：
+switch(n)
+{
+    case 1:
+        执行代码块 1
+        break;
+    case 2:
+        执行代码块 2
+        breka;
+    default:
+        n 与 case 1 和 case 2 都不匹配的时候执行的代码
+}
+当JavaScript代码块执行到break时，将跳出switch代码块 继续往下执行。
+如果switch中没有匹配的项，默认执行default代码块
+
+5.for 循环
+语法：
+for (statement 1; statement 2; statement 3){
+    code block to be excuted
+}
+statement1：在循环（代码块）开始之前执行。
+statement2：定义运行循环的条件（代码块）。如果语句2返回true，循环将重新开始，如果返回false，循环结束，语句2可选，但若忽略了语句2，需在循环内提供break。
+statement3：在执行循环（代码块）之后每次执行。可选。
+
+6.while 循环
+只要指定条件为true，循环就可以一直执行代码块。
+语法：
+while (条件) {
+  // while 中的代码
+}
+// 后续代码
+注意：确保while循环中的条件最终变为false，不然循环永远不会结束。
+
+7.do while 循环
+语法：
+do{
+  // do 的代码
+}
+while (条件);
+// 后续代码
+
+8.break 和 continue 语句
+break：语句用于跳出循环。
+continue：用于跳过循环中的一个迭代。
+
+9.JS标签（label）
+格式：
+label:
+  语句
+标签可以使任意的标识符，但不能是保留字，语句部分可以是任意语句。
+标签通常与break语句和continue语句配合使用，跳出特定的循环。
+标签通常位于 break 和 continue标签之后。
+如：
+break label;
+其作用可以理解为使 break 或 continue 语句跳出的循环层数+1。
