@@ -1,0 +1,140 @@
+1.函数定义
+1.1 JavaScript函数是用于执行特定任务的代码块。
+
+1.2 优点：代码重用：定义代码以次，并使用多次。
+
+1.3 格式：
+function functionName(parameters){
+  //函数中的代码
+}
+functionName(parameter1);
+functionName(parameter2);
+由于函数声明不是一个可执行的语句，所以不以分号结束。
+要调用函数，从函数的名称开始，然后使用括号中的函数。
+一旦函数被定义，便可根据需求进行一次或多次调用。
+
+2.函数参数
+2.1 JavaScript函数对参数的值(arguments)没有进行任何的检查，因此放什么类型的参数都可以。
+
+2.2 参数规则
+JavaScript 函数定义时参数没有指定数据类型。
+JavaScript 函数对隐藏参数（arguments）没有进行检测。
+JavaScript 函数对隐藏参数（arguments）的个数没有进行检测。
+
+2.3 使用参数
+function sayHello(name){
+    alert("你好, " + name);
+}
+sayHello("Loen");
+sayHello("Lili");
+sayHello("John");
+
+3.多参数
+3.1 可以通过逗号分隔来定义函数的多个参数。
+function myFunc(x,y){
+    // some code
+}
+myFunc(p1,p2);
+myFunc(p3,p4);
+函数定义后，可以根据需要多次调用。
+
+3.2 JavaScript 函数不检查收到的参数数量，如果使用缺少参数（少于声明数）调用函数，则将缺少的值为undefined，这表示未为其变量赋值。
+
+4.变量作用域
+4.1 作用域是可访问变量的集合。
+在 JavaScript 中，对象和函数同样也是变量。
+在 JavaScript 中，作用域为可访问变量，对象，函数的集合。
+JavaScript 函数作用域：作用域在函数内修改。
+
+4.2 局部作用域
+变量在函数内声明，变量为局部作用域。
+局部变量：只能在函数内部访问。因为局部变量只作用于函数内，所以不同的函数可以使用相同名称的变量。
+函数参数只在函数内起作用，是局部变量。
+局部变量在函数开始执行时创建，函数执行完后局部变量会自动销毁。
+局部变量的优先级高于同名的全局变量。
+
+4.3 JavaScript 全局变量
+变量在函数外定义，成为全局变量。
+全局变量有 全局作用域：网页中所有脚本和函数均可使用。
+var carName = " 大众";
+
+// 此处可调用 carName 变量
+function myFunction(){
+    // 函数内可调用 carName 变量
+}
+如果变量在函数内没用声明（没有使用var关键字），该变量为全局变量。
+// 此处可调用 carName 变量
+
+function myFunction(){
+    carName = "大众";
+    // 此处可调用 carName 变量
+}
+
+4.4 HTML 中的全局变量
+在 HTML 中，全局变量是 window 对象：所有数据变量都属于 window 对象。
+// 此处可使用 window.carName
+
+function myFunction(){
+    carName = "大众”;
+}
+
+4.5 JavaScript 变量生命周期
+JavaScript 变量生命周期在声明时初始化。
+局部变量在函数执行完毕后销毁。
+全局变量在页面关闭后销毁。
+
+5.return 语句
+5.1 return 语句在函数中是可选的。它用于从函数返回值。
+当函数执行完需要结果的计算时，此语句很有用。
+function sum(a,b){
+    return a+b;
+}
+var x = myFunction(5,6);
+alert(x);
+当 JavaScript 执行完 return 语句时，该函数停止执行。
+而如果没有从函数返回任何东西，它将返回 undefined。
+
+6.alert,prompt,confirm
+JavaScript 提供三种类型的弹出框，Alert,Prompt,和Confirm。
+6.1 Alert警告框
+当弹出警报框时，用户必须单击”确定“继续。
+警报功能采用单个参数，即弹出框中显示的文本。
+例：
+alert("你好，这是一个警告框，你必须点确定？")
+使用 alert 弹出框，将阻塞整个页面的运行，点击确定后才继续运行。
+
+6.2 Prompt 框
+通常使用提示框来让用户输入一个值。
+当弹出提示框时，输入输入值后，用户将不得不单击”确定“或”取消“继续。
+如果用户单击确定，该框将返回输入值。如果用户单击取消，该框将返回null。
+prompt()方法有两个参数
+- 第一个是要在文本框中显示的标签。
+- 第二个是在文本框中显示的默认字符串（可选）。
+例：
+var user = prompt("请输入你的名字：");
+alert(user);
+
+6.3 Confirm 框
+经常使用 confirm 让用户验证或接受某些内容。
+当弹出确认框时，用户必须单击”确定“或”取消“继续。
+如果用户单击确定，该框返回 true。如果用户单击取消，该框返回 false。
+例：
+var result = confirm("你确定要离开这个页面?");
+if (result == true){
+    alert("感谢您的光临！");
+} else {
+    alert("感谢你继续使用我们的服务！");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
