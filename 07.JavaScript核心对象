@@ -41,11 +41,11 @@ string.substring(from, to) // from必需，to可选。
 ·如果 indexStart 大于 indexEnd，则 substring 的执行效果就像两个参数调换了一样。
 
 7.2 Window 对象
-
+7.2.1
 Window 对象表示浏览器中打开的窗口。
 如果文档包含框架(<frame>或<iframe>标签)，浏览器会为HTML文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象。
 window 作为全局变量，代表了脚本正在运行的窗口，暴露给JavaScript代码。
-
+7.2.2
 Window 对象属性
 closed：返回窗口是否已被关闭。
 defaultStatus：设置或返回窗口状态栏的默认文本。
@@ -60,7 +60,80 @@ location：用于窗口或框架的 Location 对象。请参阅 Location 对象�
 name：设置或返回窗口的名称。
 navigator：对 Navigator 对象的只读引用。请参数 Navigator 对象。
 opener：返回对创建此窗口的窗口的引用。
+outerHeight：返回窗口的外部高度，包含工具条与滚动条。
+outerWidth：返回窗口的外部宽度，包含工具条与滚动条。
+pageXOffset：设置或返回当前页面相对于窗口显示区左上角的X位置。
+pageYOffset：设置或返回当前页面相对于窗口显示区左上角的Y位置。
+parent：返回父窗口。
+screen：对 Screen 对象的只读引用。请参数 Screen 对象。
+screenLeft：返回相对于屏幕窗口的x坐标。
+screenTop：返回相对于屏幕窗口的y坐标。
+screenX：返回相对于屏幕窗口的x坐标。
+screenY：返回相对于窗口的y坐标。
+sessionStorage：在浏览器中存储 key/value 对，在关闭窗口或标签页之后将会删除这些数据。
+self：返回对当前窗口的引用，等价于 Window 属性。
+status：设置窗口状态栏的文本。
+top：返回最顶层的父窗口。
+7.2.3
+Window 对象方法
+alert()：显示带有一段消息和一个确认按钮的警告框。
+atob()：解码一个 base-64 编码的字符串。
+btoa()：创建一个 base-64 编码的字符串。
+blur()：把键盘焦点从顶层窗口移开。
+clearInterval()：取消由 setInterval() 设置的 timeout。
+clearTimeout()：取消由 setTimeout() 方法设置的 timeout。
+close()：关闭浏览器窗口。
+confirm()：显示带有一段消息以及确认按钮和取消按钮的对话框。
+createPopup()：返回一个 Selection 对象，表示用户选择的文本范围或光标的当前位置。
+geTComputerStyle()：获取指定元素的 CSS 样式。
+matchMedia()：检查 media query 语句，返回一个 MediaQueryList 对象。
+moveBy()：可相对窗口的当前坐标把它移动指定的像素。
+moveTo()：把窗口的左上角移动到一个指定的坐标。
+open()：打开一个新的浏览器窗口或查找一个已命名的窗口。
+print()：打印当前窗口的内容。
+prompt()：显示可提示用户输入的对话框。
+resezeBy()：按照指定的像素调整窗口的大小。
+resizeTo()：把窗口的大小调整到指定的宽度和高度。
+scrollBy()；按照指定的像素值来滚动内容。
+scrollTo()：把内容滚动到指定的坐标。
+setInterval()：按照指定的周期（以毫秒记）来调用函数或计算表达式。
+setTimeout()：在指定的毫秒数后调用函数或计算表达式。
+stop()：停止页面载入。
+7.2.4
+open() 方法
+语法：
+window.open(URL,name,specs,replace)
+参数：
+URL: 可选，打开指定的页面URL，如果没有指定URL，打开一个新的空白窗口。
+name：可选。指定target属性或窗口的名称，支持以下值：
+          _blank：URL加载到一个新的窗口，这是默认
+          _parent：URL加载到父框架
+          _self：URL替换当前页面
+          _top：URL替换任何可加载的框架集
+          name：窗口名称
+specs：可选，一个逗号分隔的项目列表，支持以下值：
+        height=pixels：窗口的高度，最小值100
+        left=pixels：该窗口的左侧位置
+        location=yes|no|1|0：是否显示地址字段，默认值是yes
+        menubar=yes|no|1|0：是否显示菜单栏，默认值是yes
+        resizabe=yes|no|1|0：是否可调整窗口大小，默认值是yes
+        scrollbars=yes|no|1|0：是否显示滚动条，默认值是yes
+        status=yes|no|1|0：是否要添加一个状态栏，默认值是yes
+        titlebar=yes|no|1|0：是否显示标题栏 被忽略，除非调用HTML应用程序或一个值得信赖的对话框，默认值是yes
+        toolbar=yes|no|1|0：是否显示浏览器工具栏，默认值是yes
+        top=pixels：窗口顶部的位置，仅限IE浏览器
+        width=pixels：窗口的宽度，最小值为100
+replace：Optional Specifies规定了装载到窗口URL是在窗口的浏览历史中创建一个新条目，还是替换浏览历史中的当前条目，          支持下面的值：
+         true：URL替换浏览历史中的当前条目。
+         false：URL在浏览历史中创建新的条目。
+7.2.5
+setTimeout() 方法
+setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式。
+    1000ms = 1s。
+    如果只想重复执行可以使用setInterval()方法。使用clearInterval()方法来阻止函数的执行。
+    使用clearTimeout()方法来阻止函数的执行。
 
+7.3 JavaScript JSON
 
 
 
